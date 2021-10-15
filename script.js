@@ -52,7 +52,6 @@ function display(val) {
         countOfdots++;
     }
     if (val != '.' || (val == '.' && countOfdots === 0)) {
-        console.log("entered")
         if (val == '.') {
             ++countOfdots;
         }
