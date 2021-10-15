@@ -1,0 +1,60 @@
+:root {
+    --dark-gray: #5a5655;
+    --slight-gray: #6a6766;
+    --light-gray: #83807f;
+    --slight-yellow: #f1a33b;
+    --border-gray: #605c5b;
+}
+
+.interface {
+    background-color: var(--dark-gray);
+    width: 202px;
+    height: 27px;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.interface::placeholder {
+    color: #fff;
+    text-align: right;
+}
+
+.keys {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    border: 0.5px solid var(--border-gray);
+    border-radius: 0;
+    background: var(--light-gray);
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 1.0rem 1.0em;
+    cursor: pointer;
+    width: 66.5px;
+    height: 64px;
+}
+
+.btn-gray {
+    background: var(--slight-gray);
+}
+
+.btn-yellow {
+    background: var(--slight-yellow);
+}
+
+.btn-zero {
+    width: 133px;
+}

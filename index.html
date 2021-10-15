@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="keys">
+            <div class="wrapper">
+                <input onkeypress="return validate(event)" type="text" placeholder="0" class="interface" name="number">
+            </div>
+            <div class="wrapper">
+                <button class="btn btn-gray" onclick="clearScreen()">AC</button>
+                <button class="btn btn-gray" onclick="reverse()">+/-</button>
+                <button class="btn btn-gray" onclick="divide_hundred()">%</button>
+                <button class="btn btn-yellow" value="÷" onclick="myDiv(this.value)">÷</button>
+            </div>
+            <div class="wrapper">
+                <button class="btn" value=7 onclick="display(this.value)">7</button>
+                <button class="btn" value=8 onclick="display(this.value)">8</button>
+                <button class="btn" value=9 onclick="display(this.value)">9</button>
+                <button class="btn btn-yellow" value="×" onclick="myMul(this.value)">×</button>
+            </div>
+            <div class="wrapper">
+                <button class="btn" value=4 onclick="display(this.value)">4</button>
+                <button class="btn" value=5 onclick="display(this.value)">5</button>
+                <button class="btn" value=6 onclick="display(this.value)">6</button>
+                <button class="btn btn-yellow" value="-" onclick="mySub(this.value)">-</button>
+            </div>
+            <div class="wrapper">
+                <button class="btn" value=1 onclick="display(this.value)">1</button>
+                <button class="btn" value=2 onclick="display(this.value)">2</button>
+                <button class="btn" value=3 onclick="display(this.value)">3</button>
+                <button class="btn btn-yellow" value="+" onclick="mySum(this.value)">+</button>
+            </div>
+            <div class="wrapper">
+                <button class="btn btn-zero" value=0 onclick="display(this.value)">0</button>
+                <button class="btn" value=. onclick="display(this.value)">.</button>
+                <button class="btn btn-yellow" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
