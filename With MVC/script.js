@@ -101,7 +101,6 @@ class View {
         }
         return true;
     }
-
 }
 
 class Controller {
@@ -139,7 +138,7 @@ class Controller {
             this.rewrite = true;
         }
         if (currentOp == "AC") {
-            this.view.displayScreen(this.view.clear(""));
+            this.view.displayScreen(this.view.clearScreen());
         }
         if (currentOp == "+/-") {
             this.view.displayScreen(this.model.reverse(firstOp));
@@ -190,8 +189,6 @@ class Model {
         return this.result;
     }
 }
-
-// debugger;
 
 function main() {
     let model = new Model();
