@@ -86,18 +86,22 @@ class View {
             this.isOp = false;
             this.countOfdots = 0;
         }
-        document.getElementsByClassName("interface")[0].value += val;
-        // if (val != '.' || (val == '.' && countOfdots === 0)) {
-        //     if (val == '.') {
-        //         ++countOfdots;
-        //     }
-        //     document.getElementsByClassName("interface")[0].value = document.getElementsByClassName("interface")[0].value + val;
-        // }
-        // if (rewrite == true) {
-        //     clearScreen();
-        //     document.getElementsByClassName("interface")[0].value = document.getElementsByClassName("interface")[0].value + val;
-        // }
-        // rewrite = false;
+        let inputString = document.getElementsByClassName("interface")[0].value
+        if (val == '.' && inputString == 0 && inputString.length == 0) {
+            document.getElementsByClassName("interface")[0].value = "0" + val;
+            this.countOfdots++;
+        }
+        if (val != '.' || (val == '.' && this.countOfdots === 0)) {
+            if (val == '.') {
+                ++this.countOfdots;
+            }
+            document.getElementsByClassName("interface")[0].value = inputString + val;
+        }
+        if (this.rewrite == true) {
+            this.clearScreen();
+            document.getElementsByClassName("interface")[0].value = inputString + val;
+        }
+        this.rewrite = false;
     }
 
     clearScreen() {
