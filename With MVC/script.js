@@ -214,7 +214,6 @@ class Model {
         return this.result;
     }
 }
-// debugger;
 
 function main() {
     let model = new Model();
