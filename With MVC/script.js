@@ -74,7 +74,7 @@ class View {
             this.isOp = true;
             this.firstOp = document.getElementsByClassName("interface")[0].value;
         });
-        this.equal.addEventListener("click", function() {
+        this.equal.addEventListener("click",() => {
             handler(this.currentOp);
         });
     }
